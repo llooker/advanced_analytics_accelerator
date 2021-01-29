@@ -1,0 +1,13 @@
+Package: lookr
+Type: Package
+Title: Looker API Interface for R
+Version: 1.0.0
+Author: Rich Eden
+Maintainer: Shingai Samudzi <shingai@asoba.co>
+Description: Import data into R from a saved Look without row limits or java dependencies.  Save dataframes from R to BQ for availability within Looker.
+License: MIT
+Encoding: UTF-8
+Imports:
+  dplyr,
+  tidyverse,
+  bigrquery
