@@ -1,6 +1,6 @@
 # lookr
 
-A quick way to get data out of Looker without row limits.
+A quick and dirty implementation of the Looker API for R.  Specifically for importing looks without row limits, and returning dataframes into BigQuery
 
 Returns a data frame (well actually it's a [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)) with all data from specified Look.
 
