@@ -45,8 +45,7 @@ df = get_look(look_id = 123, limit = -1)  # without row limit
 The second function allows you to send the results of your analysis back to BigQuery as a net new table.  To use this function, you will need to set two global environment variables, `datasetid` and `projectid`:
 
 ```
-datasetid = <your BQ dataset id>
-projectid = <your GC project id>
+Sys.setenv(datasetid = <your BQ dataset id>, projectid = <your GC project id>)
 ```
 
 Once set, you can save your dataframe to a table:
