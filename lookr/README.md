@@ -14,6 +14,12 @@ LOOKER_CLIENT_ID = '???'
 LOOKER_CLIENT_SECRET = '???'
 ```
 
+If deploying via Jupyter notebook, you can alternatively set environment variables inline:
+
+```
+Sys.setenv(LOOKER_API_PATH = 'https://???.asoba.co:19999/api/3.1', LOOKER_CLIENT_ID = '???', LOOKER_CLIENT_SECRET = '???')
+```
+
 ## installation
 
 ```
