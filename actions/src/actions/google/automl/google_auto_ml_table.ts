@@ -13,7 +13,7 @@ export class GoogleAutomlTable extends Hub.Action {
     name = "google_automl_table"
     label = "Google Cloud AutoML Table"
     iconName = "google/automl/google_automl.png"
-    description = "Import your data into a Google Cloud AutoMl Table"
+    description = "Import your data into a Google AutoML Table"
     supportedActionTypes = [Hub.ActionType.Dashboard, Hub.ActionType.Query]
     usesStreaming = true
     requiredFields = []
@@ -42,7 +42,7 @@ export class GoogleAutomlTable extends Hub.Action {
             label: "Region",
             required: true,
             sensitive: false,
-            description: "the region will be used to manage the datasets (us-central1)",
+            description: "the GCS region where datasets are stored (e.g. us-central1)",
         },
 
     ]
@@ -54,7 +54,7 @@ export class GoogleAutomlTable extends Hub.Action {
             if (!request.params.project_id || !request.params.region || !request.formParams.dataset_id) {
                 return new Hub.ActionResponse({ success: false, message: "project_id, region and dataset are mandatory" })
             }
-            
+
             const params_error = this.validateFormParam(request)
             if (params_error) {
                 log(`error validating parameters: ${params_error}`)

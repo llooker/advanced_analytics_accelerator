@@ -367,21 +367,6 @@ export class ActionRequest {
     return sanitizeFilename(`looker_file_${Date.now()}`)
   }
 
-  /** Returns filename with whitespace removed and the file extension included
-   */
-  completeFilename() {
-    if (this.attachment && this.formParams.filename) {
-      if (this.formParams.filename.endsWith(this.attachment.fileExtension!)) {
-        return this.formParams.filename.trim().replace(/\s/g, "_")
-      } else if (this.formParams.filename.indexOf(".") !== -1) {
-        return this.suggestedFilename()
-      } else {
-        return `${this.formParams.filename.trim().replace(/\s/g, "_")}.${this.attachment.fileExtension}`
-      }
-    }
-    return this.formParams.filename
-  }
-
   /** creates a truncated message with a max number of lines and max number of characters with Title, Url,
    * and truncated Body of payload
    * @param {number} maxLines - maximum number of lines to truncate message

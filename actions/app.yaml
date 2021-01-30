@@ -10,7 +10,7 @@ includes:
   - secret_env_vars.yaml
 
 env_variables:
-  ACTION_HUB_LABEL: 'Google AutoML Action Hub'
+  ACTION_HUB_LABEL: 'Google AutoMl Action Hub'
   PORT: '8080'
   ACTION_DEBUG: '0'
   ACTION_WHITELIST: 'google_automl_table'
