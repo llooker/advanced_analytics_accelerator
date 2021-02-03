@@ -53,3 +53,11 @@ Once set, you can save your dataframe to a table:
 ```
 createBigQueryTable(<desired table name>, <name of R dataframe>)
 ```
+
+
+To-do:
+
+Add wrapper for function to append rows to existing BQ table a la:
+```
+bq_table_upload(x=players_table, values= players_df_2, create_disposition='CREATE_IF_NEEDED', write_disposition='WRITE_APPEND')
+```
