@@ -30,7 +30,7 @@ install_github('samudzi/lookr')
 
 ## usage
 
-There are two functions.  The first is the runLook Looker API endpoint, styled here as get_look:
+There are three functions.  The first is the runLook Looker API endpoint, styled here as get_look:
 
 ```
 library(lookr)
@@ -42,13 +42,12 @@ df = get_look(look_id = 123, limit = 10000)  # custom row limit
 df = get_look(look_id = 123, limit = -1)  # without row limit
 ```
 
-The second function allows you to send the results of your analysis back to BigQuery as a net new table.  To use this function, you will need to set two global environment variables, `datasetid` and `projectid`:
-
+The second function creates the necessary authentication token for your R environment to connect with your BigQuery instance.  Leveraging the 'bigrquery' package, invoking `provideBQauthentication()` sets the file path of your auth.json token, Cloud project ID and BQ dataset ID as global variables.
 ```
-Sys.setenv(datasetid = <your BQ dataset id>, projectid = <your GC project id>)
+provideBQauthentication(json_path="~/auth.json",projectid="project-id",datasetid="dataset-id",conn="connection_name")
 ```
 
-Once set, you can save your dataframe to a table:
+Once authenticated, you can save your dataframe to a table:
 
 ```
 createBigQueryTable(<desired table name>, <name of R dataframe>)
@@ -57,7 +56,7 @@ createBigQueryTable(<desired table name>, <name of R dataframe>)
 
 To-do:
 
-Add wrapper for function to append rows to existing BQ table a la:
+Add another function to allow for appending new rows to an existing table, leveraging the table_upload api function a la
 ```
 bq_table_upload(x=players_table, values= players_df_2, create_disposition='CREATE_IF_NEEDED', write_disposition='WRITE_APPEND')
 ```
