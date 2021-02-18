@@ -8,5 +8,9 @@ createBigQueryTable = function(table_name, df) {
   bigrquery::bq_table_upload(df.1,
                              df,
                              quiet = FALSE,
-                             fields = bigrquery::as_bq_fields(df))
+                             fields = bigrquery::as_bq_fields(df),
+                             create_disposition='CREATE_IF_NEEDED', 
+                             write_disposition='WRITE_APPEND')
 }
+
+
