@@ -42,7 +42,7 @@ export class GoogleAutomlTable extends Hub.Action {
             label: "Region",
             required: true,
             sensitive: false,
-            description: "the GCS region where datasets are stored (e.g. us-central1)",
+            description: "the region will be used to manage the datasets (us-central1)",
         },
 
     ]

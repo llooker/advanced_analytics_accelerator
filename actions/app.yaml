@@ -1,6 +1,5 @@
-runtime: custom
+runtime: nodejs12
 instance_class: F4
-env: flex
 
 handlers:
 - url: .*
@@ -11,10 +10,11 @@ includes:
   - secret_env_vars.yaml
 
 env_variables:
-  ACTION_HUB_LABEL: 'Advanced Analytics Actions'
+  ACTION_HUB_LABEL: 'Advanced Analytics Accelerator'
   PORT: '8080'
   ACTION_DEBUG: '0'
-  ACTION_WHITELIST: 'google_automl_table','google_cloud_storage','nifi'
+  ACTION_WHITELIST: 'google_cloud_storage,google_automl_table,nifi'
+
 
 automatic_scaling:
   max_instances: 3
