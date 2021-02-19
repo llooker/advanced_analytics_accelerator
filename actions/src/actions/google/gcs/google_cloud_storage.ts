@@ -8,7 +8,8 @@ export class GoogleCloudStorageAction extends Hub.Action {
   label = "Google Cloud Storage"
   iconName = "google/gcs/google_cloud_storage.svg"
   description = "Write data files to a Google Cloud Storage bucket."
-  supportedActionTypes = [Hub.ActionType.Dashboard, Hub.ActionType.Query]
+  supportedActionTypes = [Hub.ActionType.Query]
+  supportedFormats = [Hub.ActionFormat.Csv]
   usesStreaming = true
   requiredFields = []
   params = [
