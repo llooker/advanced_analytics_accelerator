@@ -1,0 +1,9 @@
+LOOKER_API_PATH = '<looker api path>'
+LOOKER_CLIENT_ID = '<client id>'
+LOOKER_CLIENT_SECRET = '<client secret>'
+
+GC_BQ_PROJECTID = '<project id>'
+GC_BQ_DATASETID = '<bq dataset id>'
+
+GCS_AUTH_FILE="<json auth file>"
+GCS_DEFAULT_BUCKET="<Google Cloud bucket>"
