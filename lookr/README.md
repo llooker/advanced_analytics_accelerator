@@ -25,7 +25,7 @@ Sys.setenv(LOOKER_API_PATH = 'https://???.asoba.co:19999/api/3.1', LOOKER_CLIENT
 ```
 install.packages('devtools')
 library('devtools')
-install_github('samudzi/lookr')
+install_github('llooker/advanced_analytics_accelerator/lookr')
 ```
 
 ## usage
