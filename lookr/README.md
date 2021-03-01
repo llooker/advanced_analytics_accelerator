@@ -54,9 +54,4 @@ createBigQueryTable(<desired table name>, <name of R dataframe>)
 ```
 
 
-To-do:
 
-Add another function to allow for appending new rows to an existing table, leveraging the table_upload api function a la
-```
-bq_table_upload(x=players_table, values= players_df_2, create_disposition='CREATE_IF_NEEDED', write_disposition='WRITE_APPEND')
-```
